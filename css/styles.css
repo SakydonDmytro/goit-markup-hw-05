@@ -222,8 +222,34 @@ header styles
 {
     fill: var(--main-hover-color);
 }
-
-
+/* ~~~~~~~~~~
+modal-form 
+~~~~~~~~~~~~~
+*/
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.modal-wrapper {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--main-background-color);
+    width: 528px;
+    height: 581px;
+    border-radius: 4px;
+}
+.modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
 
 /* ~~~~~~~~~~
 heroic styles 
@@ -376,7 +402,7 @@ activities styles
     width: 100%;
     height: 70px;
     position: absolute; 
-    background-color: rgba(47, 48, 58, 0.8);
+    background-color: var(--activities-img-ontop);
     
 }
 .activities-imagies-description {    
