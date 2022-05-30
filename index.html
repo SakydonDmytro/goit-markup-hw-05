@@ -63,10 +63,14 @@
 			<section class="heroic">
 				<div class="container hero-container">
 					<h1 class="heroic-header">Эффективные решения для вашего бизнеса</h1>
-					<button class="heroic-button" type="button">Заказать услугу</button>
-					<div class="backdrop">
+					<button class="heroic-button" type="button" data-modal-open>Заказать услугу</button>
+					<div class="backdrop is-hidden" data-modal>
 						<div class="modal-wrapper">
-							<button class="modal-btn"></button>
+							<button class="modal-btn" type="button" data-modal-close>
+								<svg width="11" height="11">
+									<use href="./images/close.svg#close"></use>
+								</svg>
+							</button>
 							<form class="modal-form"></form>
 						</div>
 					</div>
@@ -430,5 +434,6 @@
 				</div>
 			</div>
 		</footer>
+		<script src="./js/modal.js"></script>
 	</body>
 </html>

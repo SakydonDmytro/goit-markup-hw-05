@@ -14,6 +14,7 @@
     --social-icon-color:#AFB1B8;
     --bottom-social-link-background:rgba(255, 255, 255, 0.1);
     --activities-img-ontop:rgba(47, 48, 58, 0.8);
+    --btn-border:rgba(0, 0, 0, 0.1);
 }
 
 /*~~~~~~~~~~~~~~~~~~
@@ -234,8 +235,13 @@ modal-form
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
 }
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
 .modal-wrapper {
-    z-index: 10;
+  
     position: absolute;
     top: 50%;
     left: 50%;
@@ -246,9 +252,25 @@ modal-form
     border-radius: 4px;
 }
 .modal-btn {
+    
+    
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+
+    border: 1px solid var(--btn-border);
+    border-radius: 50%;
+    background-color: var(--main-background-color);
+
+    cursor: pointer;
 }
 
 /* ~~~~~~~~~~
