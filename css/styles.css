@@ -15,6 +15,9 @@
     --bottom-social-link-background:rgba(255, 255, 255, 0.1);
     --activities-img-ontop:rgba(47, 48, 58, 0.8);
     --btn-border:rgba(0, 0, 0, 0.1);
+
+    --amination: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 /*~~~~~~~~~~~~~~~~~~
@@ -147,7 +150,12 @@ header styles
     padding-bottom: 32px;
     padding-top: 32px;
     position: relative;
+    transition: color var(--amination);
 }
+/* .navigation-links::after {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
+
 .navigation-links:last-child {
     margin-right: 0;
 }
@@ -176,8 +184,10 @@ header styles
     color: var(--secondary-text-color);
     padding-bottom: 32px;
     padding-top: 32px;
-  
+    transition: color var(--amination);
 }
+
+
 .head-contacts-list {
     margin-right: 50px;
 }
@@ -194,10 +204,14 @@ header styles
 
  {
     color: var(--main-hover-color);
-
-
 }
-.navigation-links:hover:after,
+.mail-logo,
+.phone-icon
+{
+    transition: fill var(--amination);
+}
+
+/* .navigation-links:hover:after,
 .navigation-links:focus:after
  {
     position: absolute;
@@ -209,7 +223,7 @@ header styles
     width: 100%;
     height: 4px;
     background-color: var(--main-hover-color);
-}
+} */
 
 .navigation-links:hover,
 .navigation-links:focus {
@@ -331,7 +345,8 @@ heroic styles
     cursor: pointer;
     font-family: inherit;
     padding: 10px 32px;
-
+    transition: color,box-shadow 1200ms ease;
+   
 }
 
 .hero-container {
@@ -515,7 +530,12 @@ activities styles
     height: 44px;
     border-radius: 50%;
     fill: var(--social-icon-color) ;
+    transition: background-color var(--amination);
 }
+.team-social-icon {
+    transition: fill var(--amination);
+}
+
 .team-social-link:hover .team-social-icon,
 .team-social-link:focus .team-social-icon
 {
@@ -563,6 +583,7 @@ margin-bottom: 50px;
     height: 92px;
     border: 1px solid var(--social-icon-color);
     border-radius: 4px;
+    transition: border,border-radius var(--amination);
 }
 .client-item {
     align-items: center;
@@ -574,6 +595,7 @@ margin-bottom: 50px;
 
 .client-item {
     fill: var(--social-icon-color);
+    transition: fill var(--amination);
 }
 .client-link:hover .client-item, 
 .client-link:focus .client-item{
@@ -640,6 +662,7 @@ Footer styles
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--bottom-links-color);
+    transition: color var(--amination);
 }
 .bottom-list-mail {
     margin-bottom: 9px;
@@ -707,6 +730,9 @@ portfolio part
     letter-spacing: 0.03em;
     color: currentColor;
     cursor: pointer;
+
+    transition: color var(--amination), background-color var(--amination), box-shadow var(--amination), 
+    border-radius var(--amination);
 }
 .portfolio-buttons {
     margin-right: 8px;
@@ -735,7 +761,10 @@ portfolio part
     margin-bottom: 30px;
     background: var(--main-background-color);
     box-sizing: border-box;
-    
+    transition: box-shadow var(--amination) ;
+}
+.portfolio-item-box {
+    transition: box-shadow var(--amination);
 }
 .portfolio-item:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px 
