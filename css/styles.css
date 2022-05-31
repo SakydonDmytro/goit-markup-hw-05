@@ -15,6 +15,7 @@
     --bottom-social-link-background:rgba(255, 255, 255, 0.1);
     --activities-img-ontop:rgba(47, 48, 58, 0.8);
     --btn-border:rgba(0, 0, 0, 0.1);
+    --portfolio-hover: rgba(33, 150, 243, 0.9);
 
     --amination: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
@@ -734,6 +735,32 @@ portfolio part
     transition: color var(--amination), background-color var(--amination), box-shadow var(--amination), 
     border-radius var(--amination);
 }
+.Image-styles {
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    display: block;
+
+    width: 370px;
+    height: 294px;
+    bottom: -294px;
+    left: 0;
+    
+
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    text-align: left;
+    padding: 63px 24px;
+    background-color: var(--portfolio-hover);
+    color: var(--main-button-text-color);
+    opacity: 0;
+   
+}
+
+
+
 .portfolio-buttons {
     margin-right: 8px;
 }
@@ -762,11 +789,22 @@ portfolio part
     background: var(--main-background-color);
     box-sizing: border-box;
     transition: box-shadow var(--amination) ;
+    
+    transition-property: transform;
+    transition-duration: 300ms;
+    transition-timing-function: linear;
+    transition-delay: 0;
+    
 }
 .portfolio-item-box {
     transition: box-shadow var(--amination);
+    
 }
-.portfolio-item:hover {
+.portfolio-item:hover .overlay {
+   
+    transform: translateY(-294px);
+    opacity: 1;
+
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px 
     rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -783,6 +821,7 @@ portfolio part
 } 
 
 .card-context {
+    
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
     border-top: none;
